@@ -70,9 +70,9 @@ void xscope_handler(chanend c_host_data,
         if (second_count == 60) {
           second_count = 0;
           minute_count += 1;
-        }
-        if (minute_count % 5 == 0) {
-          debug_printf("Time elapsed: %d mins\n");
+          if (minute_count % 5 == 0) {
+	    debug_printf("Time elapsed: %d mins\n", minute_count);
+	  }
         }
         t += ticks_per_second;
       break;

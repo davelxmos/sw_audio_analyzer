@@ -26,8 +26,8 @@ def xrunProcess(master, adapter_id, name, xe):
 def runTest(args):
   master = xmos.test.master.Master()
 
-  analysis_bin = os.path.join(rootDir, 'sw_audio_analyzer', 'app_audio_analyzer_avb',
-                             'bin', 'audio_analyzer.xe')
+  analysis_bin = os.path.join(rootDir, 'sw_audio_analyzer', 'app_audio_analyzer_mc',
+                             'bin', 'app_audio_analyzer_mc.xe')
   xrun = xrunProcess(master, args.adapter_id, "xrun", analysis_bin)
 
   controller_path = os.path.join(rootDir, 'sw_audio_analyzer', 'host_audio_analyzer')
